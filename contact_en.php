@@ -75,24 +75,23 @@ if (isset($_POST['envoi']))
 if (($err_formulaire) || (!isset($_POST['envoi'])))
 {
 	echo '
-<div class="content">
-	<form method="post" class="fo" action="'.$form_action.'">
-	<fieldset class="fo"x>
+	<form method="post" action="'.$form_action.'">
+	<fieldset>
 	<p>
-		<label for="nom" class="txt">Name :</label>
+		<label for="nom">Name :</label>
 		<input type="text" id="nom" name="nom" value="'.stripslashes($nom).'" tabindex="1" />
 	</p>
 	<p>
-		<label for="email" class="txt" >Email :</label>
+		<label for="email">Email :</label>
 		<input type="text" id="email" name="email" value="'.stripslashes($email).'" tabindex="2" />
 	</p>
  
 	<p>
-		<label for="objet" class="txt" >Subject :</label>
+		<label for="objet">Subject :</label>
 		<input type="text" id="objet" name="objet" value="'.stripslashes($objet).'" tabindex="3" />
 	</p>
 	<p>
-			<label for="message" class="txt" >Message :</label>
+			<label for="message">Message :</label>
 		<textarea id="message" name="message" tabindex="4" cols="30" rows="8">
 		'.stripslashes($message).'
 		</textarea>
@@ -101,6 +100,6 @@ if (($err_formulaire) || (!isset($_POST['envoi'])))
 	<div style="text-align:center;"><input value="submit" type="image" src="http://hana.pm/mail.png" name="envoi" width="70" height="70" /></div>
 	</fieldset>
 	</form>
- </div>';
+';
 };
 ?>
